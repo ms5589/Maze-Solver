@@ -78,7 +78,7 @@ namespace Ksu.Cis300.MazeSolver
         /// <param name="e"></param>
         private void uxMaze_MouseClick(object sender, MouseEventArgs e)
         {
-         Cell cell = uxMaze.GetCellFromPixel(e.Location);
+            Cell cell = uxMaze.GetCellFromPixel(e.Location);
             if (uxMaze.IsInMaze(cell))
             {
                 //MessageBox.Show("starting point is " + cell.Row + " " + cell.Column);
@@ -86,8 +86,8 @@ namespace Ksu.Cis300.MazeSolver
                 uxMaze.EraseAllPaths();
                 bool[,] avoid = new bool[uxMaze.MazeHeight, uxMaze.MazeWidth];
                 bool result = DrawReal(cell, avoid);
-                if (result == false) 
-                MessageBox.Show("No path found");
+                if (result == false)
+                    MessageBox.Show("No path found");
                 //DrawPath(cell)
                 uxMaze.Invalidate();
             }
@@ -105,46 +105,46 @@ namespace Ksu.Cis300.MazeSolver
         /// If there is no path to an exit, displays a message to that effect.
         /// </summary>
         /// <param name="cell">The start of the path.</param>
-      /*  private void DrawPath(Cell cell)
-        {
-            Stack<Direction> s = new Stack<Direction>();
-            bool[,] visited = new bool[uxMaze.MazeHeight, uxMaze.MazeWidth];
-            visited[cell.Row, cell.Column] = true;
-            Direction dir = Direction.North;
-            while (uxMaze.IsInMaze(cell))
-            {
-                if (dir <= Direction.West)
-                {
-                    Cell nextCell = uxMaze.Step(cell, dir);
-                    if (uxMaze.IsClear(cell, dir) && (!uxMaze.IsInMaze(nextCell) || !visited[nextCell.Row, nextCell.Column]))
-                    {
-                        uxMaze.DrawPath(cell, dir);
-                        cell = nextCell;
-                        s.Push(dir);
-                        dir = Direction.North;
-                        if (uxMaze.IsInMaze(cell))
-                        {
-                            visited[cell.Row, cell.Column] = true;
-                        }
-                    }
-                    else
-                    {
-                        dir++;
-                    }
-                }
-                else if (s.Count > 0)
-                {
-                    dir = s.Pop();
-                    cell = uxMaze.ReverseStep(cell, dir);
-                    uxMaze.ErasePath(cell, dir);
-                    dir++;
-                }
-                else
-                {
-                    MessageBox.Show("There is no path from this cell.");
-                    return;
-                }
-            }
-        } */
+        /*  private void DrawPath(Cell cell)
+          {
+              Stack<Direction> s = new Stack<Direction>();
+              bool[,] visited = new bool[uxMaze.MazeHeight, uxMaze.MazeWidth];
+              visited[cell.Row, cell.Column] = true;
+              Direction dir = Direction.North;
+              while (uxMaze.IsInMaze(cell))
+              {
+                  if (dir <= Direction.West)
+                  {
+                      Cell nextCell = uxMaze.Step(cell, dir);
+                      if (uxMaze.IsClear(cell, dir) && (!uxMaze.IsInMaze(nextCell) || !visited[nextCell.Row, nextCell.Column]))
+                      {
+                          uxMaze.DrawPath(cell, dir);
+                          cell = nextCell;
+                          s.Push(dir);
+                          dir = Direction.North;
+                          if (uxMaze.IsInMaze(cell))
+                          {
+                              visited[cell.Row, cell.Column] = true;
+                          }
+                      }
+                      else
+                      {
+                          dir++;
+                      }
+                  }
+                  else if (s.Count > 0)
+                  {
+                      dir = s.Pop();
+                      cell = uxMaze.ReverseStep(cell, dir);
+                      uxMaze.ErasePath(cell, dir);
+                      dir++;
+                  }
+                  else
+                  {
+                      MessageBox.Show("There is no path from this cell.");
+                      return;
+                  }
+              }
+          } */
     }
 }

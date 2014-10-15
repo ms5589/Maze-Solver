@@ -18,3 +18,6 @@ C:\Users\Sagar Mehta\Desktop\Labs\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\Ks
 C:\Users\Sagar Mehta\Desktop\Labs\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\obj\Debug\Ksu.Cis300.MazeSolver.Properties.Resources.resources
 C:\Users\Sagar Mehta\Desktop\Labs\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\obj\Debug\Ksu.Cis300.MazeSolver.UserInterface.resources
 C:\Users\Sagar Mehta\Desktop\Labs\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\obj\Debug\Ksu.Cis300.MazeSolver.csproj.GenerateResource.Cache
+C:\Users\Sagar Mehta\Documents\Git Repos\project3\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\bin\Debug\Ksu.Cis300.MazeSolver.exe.config
+C:\Users\Sagar Mehta\Documents\Git Repos\project3\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\obj\Debug\Ksu.Cis300.MazeSolver.exe
+C:\Users\Sagar Mehta\Documents\Git Repos\project3\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\Ksu.Cis300.MazeSolver\obj\Debug\Ksu.Cis300.MazeSolver.pdb

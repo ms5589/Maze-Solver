@@ -1,5 +1,6 @@
 ﻿/* UserInterface.cs
  * Author: Rod Howell
+ * Modified by: Sagar Mehta 
  */
 using System;
 using System.Collections.Generic;
@@ -36,10 +37,17 @@ namespace Ksu.Cis300.MazeSolver
         {
             uxMaze.Generate();
         }
-        private bool DrawReal(Cell cell, bool[,] avoid)
+
+        /// <summary>
+        /// Draws a path from the given cell to an exit by recursion and returns a bool
+        /// </summary>
+        /// <param name="cell"></param>
+        /// <param name="avoid"></param>
+        /// <returns></returns>
+        private bool DrawLines(Cell cell, bool[,] avoid)
         {
             if (!(uxMaze.IsInMaze(cell))) return true;
-            Cell[] childcells = new Cell[4];
+            Cell[] children = new Cell[4];
             avoid[cell.Row, cell.Column] = true;
             int count = 0;
             for (Direction d = Direction.North; d <= Direction.West; d++)
@@ -47,28 +55,21 @@ namespace Ksu.Cis300.MazeSolver
 
                 if (uxMaze.IsClear(cell, d) && (!uxMaze.IsInMaze(uxMaze.Step(cell, d)) || !avoid[uxMaze.Step(cell, d).Row, uxMaze.Step(cell, d).Column]))
                 {
-                    childcells[count] = uxMaze.Step(cell, d);
-                    uxMaze.DrawPath(cell, d);
-                    bool result = DrawReal(childcells[count], avoid);
+                    children[count] = uxMaze.Step(cell, d);
 
-                    if (result) return true;
+                    bool result = DrawLines(children[count], avoid);
+                    if (result) 
+                    {
+                        uxMaze.DrawPath(cell, d);
+                        return true;
+                    }
+                    
                 }
-                uxMaze.ErasePath(childcells[count], d);
+                uxMaze.ErasePath(children[count], d);
                 uxMaze.Invalidate();
             }
-
-            return false;
-            /*if (flag == 1)
-            {
-                DrawReal(childcells[0], avoid);
-                DrawReal(childcells[1], avoid);
-                DrawReal(childcells[2], avoid);
-                DrawReal(childcells[3], avoid);
-            }
-        */
-
-
-        }
+                return false;
+         }
 
 
         /// <summary>
@@ -81,31 +82,25 @@ namespace Ksu.Cis300.MazeSolver
             Cell cell = uxMaze.GetCellFromPixel(e.Location);
             if (uxMaze.IsInMaze(cell))
             {
-                //MessageBox.Show("starting point is " + cell.Row + " " + cell.Column);
-                //MessageBox.Show(uxMaze.Height+" "+uxMaze.Width);
                 uxMaze.EraseAllPaths();
                 bool[,] avoid = new bool[uxMaze.MazeHeight, uxMaze.MazeWidth];
-                bool result = DrawReal(cell, avoid);
+                bool result = DrawLines(cell, avoid);
                 if (result == false)
+                {
                     MessageBox.Show("No path found");
-                //DrawPath(cell)
+                }
                 uxMaze.Invalidate();
             }
-            /*   Cell cell = uxMaze.GetCellFromPixel(e.Location);
-            if (uxMaze.IsInMaze(cell))
-            {
-                uxMaze.EraseAllPaths();
-                //DrawPath(cell);
-                uxMaze.Invalidate();
-            } */
         }
 
+/*  
         /// <summary>
         /// Draws a path from the given cell to an exit.
         /// If there is no path to an exit, displays a message to that effect.
         /// </summary>
         /// <param name="cell">The start of the path.</param>
-        /*  private void DrawPath(Cell cell)
+        
+         private void DrawPath(Cell cell)
           {
               Stack<Direction> s = new Stack<Direction>();
               bool[,] visited = new bool[uxMaze.MazeHeight, uxMaze.MazeWidth];
@@ -145,6 +140,7 @@ namespace Ksu.Cis300.MazeSolver
                       return;
                   }
               }
-          } */
+          } 
+*/
     }
 }

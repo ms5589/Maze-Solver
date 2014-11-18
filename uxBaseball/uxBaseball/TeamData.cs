@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* TeamData.cs
+ * Author: Sagar Mehta
+ *Each instance of this class will be used to store data taken from a single line of 
+ *the "TEAMABR.csv" file
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +29,7 @@ namespace uxBaseball
         }
         public override string ToString()
         {
-            return (location+" "+nickName+" ("+firstYear+") "+lastYear+" ") ;
+            return (location+" "+nickName+" ("+firstYear+"-"+lastYear+") ") ;
         } //toString override
         
         public int CompareTo(TeamData td)

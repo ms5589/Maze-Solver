@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*Form1.cs
+* Author: Sagar Mehta
+* Stores main dictionary, HashSet and will handle the event handlers
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,6 +66,7 @@ namespace uxBaseball
                     {
                         while (input.EndOfStream == false)
                         {
+                            //comboBox1.Text = "";
                             string[] line = input.ReadLine().Split(',');
                             string[] temp = new string[101];
                             Array.Copy(line, temp,temp.Length);
@@ -94,6 +99,8 @@ namespace uxBaseball
                                 _teamAbbrevs.Add(_teamInfo[gd.homeAbr].ToString());
                             }
                         }//end while
+                        comboBox1.Items.Clear();
+                            
                         foreach (string a in _teamAbbrevs)
                         {
                             comboBox1.Items.Add(a.ToString());

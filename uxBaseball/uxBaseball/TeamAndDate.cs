@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*TeamAndDate.cs
+* Author: Sagar Mehta
+*Instances of this class will contain a team abbreviation and a date (stored as a DateTime). 
+*These instances will be used as keys in a dictionary.
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

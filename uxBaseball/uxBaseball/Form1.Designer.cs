@@ -90,7 +90,7 @@
             this.Controls.Add(this.uxDateTimePicker);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Baseball Scores";
             this.ResumeLayout(false);
 
         }

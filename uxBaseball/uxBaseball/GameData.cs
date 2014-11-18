@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*GameData.cs
+ * Author: Sagar Mehta
+ * Each instance of this class will store information to be displayed for a single game
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

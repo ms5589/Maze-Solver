@@ -1,0 +1,13 @@
+C:\Users\Sagar Mehta\Desktop\uxBaseball\uxBaseball\bin\Debug\uxBaseball.exe.config
+C:\Users\Sagar Mehta\Desktop\uxBaseball\uxBaseball\obj\Debug\uxBaseball.csprojResolveAssemblyReference.cache
+C:\Users\Sagar Mehta\Desktop\uxBaseball\uxBaseball\obj\Debug\uxBaseball.Form1.resources
+C:\Users\Sagar Mehta\Desktop\uxBaseball\uxBaseball\obj\Debug\uxBaseball.GameInformationcs.resources
+C:\Users\Sagar Mehta\Desktop\uxBaseball\uxBaseball\obj\Debug\uxBaseball.Properties.Resources.resources
+C:\Users\Sagar Mehta\Desktop\uxBaseball\uxBaseball\obj\Debug\uxBaseball.csproj.GenerateResource.Cache
+C:\Users\Sagar Mehta\Desktop\uxBaseball\uxBaseball\bin\Debug\uxBaseball.exe
+C:\Users\Sagar Mehta\Desktop\uxBaseball\uxBaseball\bin\Debug\uxBaseball.pdb
+C:\Users\Sagar Mehta\Desktop\uxBaseball\uxBaseball\obj\Debug\uxBaseball.exe
+C:\Users\Sagar Mehta\Desktop\uxBaseball\uxBaseball\obj\Debug\uxBaseball.pdb
+C:\Users\Sagar Mehta\Documents\Git Repos\project3\uxBaseball\uxBaseball\bin\Debug\uxBaseball.exe.config
+C:\Users\Sagar Mehta\Documents\Git Repos\project3\uxBaseball\uxBaseball\obj\Debug\uxBaseball.exe
+C:\Users\Sagar Mehta\Documents\Git Repos\project3\uxBaseball\uxBaseball\obj\Debug\uxBaseball.pdb
